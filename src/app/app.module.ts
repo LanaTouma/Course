@@ -10,8 +10,6 @@ import { MoviesComponent } from './dashboard/movies/view/view-movies.component';
 import { AddMoviesComponent } from './dashboard/movies/add/add-movies/add-movies.component';
 import { EditMoviesComponent } from './dashboard/movies/edit/edit-movies/edit-movies.component';
 import { NavbarComponent } from './dashboard/layouts/navbar/navbar.component';
-=======
-import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -21,9 +19,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MoviesComponent,
     AddMoviesComponent,
     EditMoviesComponent,
-=======
-
     NavbarComponent
+
   ],
   imports: [
     BrowserModule,
