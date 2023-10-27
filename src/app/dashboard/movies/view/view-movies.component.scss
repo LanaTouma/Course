@@ -1,0 +1,108 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    background-color: #f0f0f0; /* Gray background color */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row when the width is limited */
+    justify-content: flex-start; /* Align cards to the left */
+}
+
+.card {
+    background-color: #fff; /* White card background color */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 10px; /* Add spacing between cards */
+    width: 300px; /* Set a fixed width for each card */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.image-container {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    overflow: hidden;
+    // margin: 50px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container:hover {
+    color: #007bff; /* Change the color on hover (you can use your preferred color) */
+    transform: scale(1.1); /* Scale up the text slightly on hover */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+    transition: color 0.3s, transform 0.3s; /* Add a smooth color and transform transition */
+}
+
+.title:hover {
+    color: #007bff; /* Change the color on hover (you can use your preferred color) */
+    transform: scale(1.1); /* Scale up the text slightly on hover */
+}
+
+.genre {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.genre:hover {
+    color: #007bff;
+}
+
+.action-buttons {
+    margin: 20px;
+}
+
+.action-button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color, you can change it */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.action-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+img.eye {
+    position: absolute;
+    width: 100%;
+    max-width: 2em;
+    top: 44%;
+    left: 43%;
+}
+
+@media (min-width:400px) {
+    img.eye {
+      max-width: 3em;
+  }
+  }

@@ -9,7 +9,7 @@ export class Director{
     FullName:      string
 }
 
-export class Movie{
+export class Movies{
     ID:            number;
     Title:         string;
     ImagePath:     string;

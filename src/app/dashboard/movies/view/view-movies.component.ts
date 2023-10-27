@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../movies.service';
+import { Movies } from 'src/global/shared-clasess';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-view-movies',
@@ -15,10 +17,13 @@ export class MoviesComponent implements OnInit {
   newItem: any;
   updatedItem: any;
 
+  movies: Movies[];
+
   ngOnInit() {
     this.getAllItems();
     this.getOneItem(5);
   }
+
 
   //Add the lazy loading concept here.... please :)
   getAllItems() {
@@ -39,9 +44,9 @@ export class MoviesComponent implements OnInit {
   }
 
   getAllMovies() {
-    this.moviesService.getAll('Movies').subscribe(data => {
-      this.items = data;
-      console.log(this.items)
+    this.moviesService.getAll('Movies').subscribe((data: Movies[]) => {
+      this.movies = data;
+      console.log(this.items); // Assign the response to the movies array
     });
   }
 
