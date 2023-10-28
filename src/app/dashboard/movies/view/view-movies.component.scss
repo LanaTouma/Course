@@ -91,18 +91,3 @@ body {
 .action-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
-
-
-img.eye {
-    position: absolute;
-    width: 100%;
-    max-width: 2em;
-    top: 44%;
-    left: 43%;
-}
-
-@media (min-width:400px) {
-    img.eye {
-      max-width: 3em;
-  }
-  }
