@@ -92,7 +92,7 @@ export class MoviesComponent implements OnInit {
   /** Delete one items section **/
 
   deleteItem(id: any) {
-    this.moviesService.delete('', id).subscribe(() => {
+    this.moviesService.delete('Movies', id).subscribe(() => {
       this.getAllItems();
     });
   }

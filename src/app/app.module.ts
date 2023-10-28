@@ -11,6 +11,7 @@ import { AddMoviesComponent } from './dashboard/movies/add/add-movies/add-movies
 import { EditMoviesComponent } from './dashboard/movies/edit/edit-movies/edit-movies.component';
 
 import { NavbarComponent } from './dashboard/layouts/navbar/navbar.component';
+import { MoviesModule } from './dashboard/movies/view/view-movies.module';
 
 
 @NgModule({
