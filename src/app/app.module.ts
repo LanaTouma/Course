@@ -12,7 +12,7 @@ import { EditMovieComponent } from './dashboard/movies/edit/edit-movies/edit-mov
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './dashboard/layouts/navbar/navbar.component';
 import { MoviesModule } from './dashboard/movies/view/view-movies.module';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,9 @@ import { MoviesModule } from './dashboard/movies/view/view-movies.module';
     BrowserModule,
     HttpClientModule,
     MoviesModule,
+    RouterModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
