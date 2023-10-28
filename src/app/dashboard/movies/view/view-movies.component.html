@@ -10,7 +10,7 @@
     <div class="cards-container">
         <div class="card" *ngFor="let movie of movies">
             <div class="image-container">
-              <img class="image" [src]= movie.ImagePath alt="Your Image">
+              <img class="image" [src]="'http://' + movie.ImagePath" alt="Your Image">
             </div>
             <div class="title">{{ movie.Title }}</div>
             <div class="genre">{{ movie.Genre }}</div>
