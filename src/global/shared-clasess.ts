@@ -1,10 +1,10 @@
 
-export class Genre {
+export class Genres {
     ID:            number;
     Name:          string;
 }
 
-export class Director{
+export class Directors{
     Id:            number;
     FullName:      string
 }
@@ -13,7 +13,7 @@ export class Movies{
     ID:            number;
     Title:         string;
     ImagePath:     string;
-    ReleaseYear:   Date;
+    ReleaseYear:   string;
     GenreId:       number;
     DirectorId:    number;
     Genre:         string;

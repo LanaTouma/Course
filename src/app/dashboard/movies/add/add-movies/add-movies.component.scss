@@ -1,0 +1,82 @@
+.container {
+    background-color: white; /* White background color */
+    border-radius: 10px; /* Rounded border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  
+    width: 70%; 
+    min-height: 70vh; 
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content:center ;
+    padding: 20px; 
+
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+  
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+    color: #007bff;
+    transition: color 0.3s, transform 0.3s; /* Add a smooth color and transform transition */
+    transform: scale(1.1);
+}
+
+input, select {
+    width: calc(100% - 22px); /* Adjust width to account for padding and borders */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+  
+.action-buttons {
+    margin: 20px;
+}
+
+.action-button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color, you can change it */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .error {
+    color: red;
+    padding: 10px;
+  }
+
+  .error-border {
+    border: 1px solid red;
+  }
+  
+  .loader {
+    border: 6px solid #6f6e6e;
+    border-top: 6px solid #000000;
+    border-radius: 60%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

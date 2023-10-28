@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../movies.service';
 import { Movies } from 'src/global/shared-clasess';
 import { NgOptimizedImage } from '@angular/common'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-movies',
@@ -10,14 +11,16 @@ import { NgOptimizedImage } from '@angular/common'
 })
 export class MoviesComponent implements OnInit {
 
-  constructor(private moviesService: MoviesService<any>) { }
+  constructor(private moviesService: MoviesService<any>,private router: Router) { }
 
-  items: any[] = [];
-  selectedItem: any;
-  newItem: any;
-  updatedItem: any;
 
-  movies: Movies[];
+  items:          any[] = [];
+  selectedItem:   any;
+  newItem:        any;
+  updatedItem:    any;
+
+  movies:         Movies[];
+  loader:         boolean = true;
 
   ngOnInit() {
     this.getAllItems();
@@ -46,6 +49,7 @@ export class MoviesComponent implements OnInit {
   getAllMovies() {
     this.moviesService.getAll('Movies').subscribe((data: Movies[]) => {
       this.movies = data;
+      this.loader = false;
       console.log(this.items); // Assign the response to the movies array
     });
   }
@@ -97,9 +101,6 @@ export class MoviesComponent implements OnInit {
     });
   }
 
-  editMovie(id: number) {
-    console.log('Edit button clicked with ID:', id);
-  }
-  
+
 }
 
