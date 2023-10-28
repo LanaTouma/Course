@@ -35,7 +35,9 @@ export class MoviesService<T> {
     return this.http.put<T>(`${endpoint}/${id}`, item);
   }
 
+
   delete(endpoint: string, id: any): Observable<any> {
-    return this.http.delete(`${endpoint}/${id}`);
+    return this.http.delete<T>(`${this.apiUrl}${endpoint}/${id}`);
   }
+  
 }
