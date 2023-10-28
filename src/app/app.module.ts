@@ -8,11 +8,11 @@ import { AppComponent } from './app.component';
 
 import { MoviesComponent } from './dashboard/movies/view/view-movies.component';
 import { AddMoviesComponent } from './dashboard/movies/add/add-movies/add-movies.component';
-import { EditMoviesComponent } from './dashboard/movies/edit/edit-movies/edit-movies.component';
-
+import { EditMovieComponent } from './dashboard/movies/edit/edit-movies/edit-movies.component';
+import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './dashboard/layouts/navbar/navbar.component';
 import { MoviesModule } from './dashboard/movies/view/view-movies.module';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,15 +20,19 @@ import { MoviesModule } from './dashboard/movies/view/view-movies.module';
     NavbarComponent,
     MoviesComponent,
     AddMoviesComponent,
-    EditMoviesComponent,
-    NavbarComponent
+    EditMovieComponent,
+    NavbarComponent,
+   
+ 
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     MoviesModule,
+    RouterModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

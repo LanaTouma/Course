@@ -97,6 +97,9 @@ export class MoviesComponent implements OnInit {
     });
   }
 
-
+  editMovie(id: number) {
+    console.log('Edit button clicked with ID:', id);
+  }
+  
 }
 
