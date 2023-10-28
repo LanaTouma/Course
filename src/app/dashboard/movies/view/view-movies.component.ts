@@ -101,10 +101,6 @@ export class MoviesComponent implements OnInit {
     });
   }
 
-  goToAddComponent() {
-    this.router.navigate(['/add']); // Navigate to the "add" route
-  }
-
 
 }
 
