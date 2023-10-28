@@ -1,10 +1,10 @@
 
-export class Genre {
+export class Genres {
     ID:            number;
     Name:          string;
 }
 
-export class Director{
+export class Directors{
     Id:            number;
     FullName:      string
 }

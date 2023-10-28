@@ -1,5 +1,12 @@
- <div class="page-container">
-    <div></div>
+ 
+    <div class="loader-container" *ngIf = "loader">
+      <div class="loader"></div>
+    </div>
+    <div class="action-buttons" *ngIf = "!loader">
+      <button class="action-button" title="Add" (click)="goToAddComponent()">
+        <i class="fa fa-plus"></i>
+      </button>
+     </div>
     <div class="cards-container">
         <div class="card" *ngFor="let movie of movies">
             <div class="image-container">
@@ -9,13 +16,12 @@
             <div class="genre">{{ movie.Genre }}</div>
             <div>              {{ movie.ReleaseYear }}</div>
             <div class="action-buttons">
-                <button class="action-button">
-                  <i class="fa fa-pencil"></i>
+                <button class="action-button" title="Edit">
+                  <i class="fa fa-pen"></i>
                 </button>
-                <button class="action-button" style="background-color: rgb(185, 4, 4);" (click)="deleteItem(movie.ID)">
+                <button class="action-button-delete" title="Delete" (click)="deleteItem(movie.ID)">
                   <i class="fa fa-trash"></i>
                 </button>
             </div>
         </div>
     </div>
-</div>
