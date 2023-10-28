@@ -28,7 +28,7 @@ export class MoviesService<T> {
   }
 
   create(endpoint: string, item: T): Observable<T> {
-    return this.http.post<T>(endpoint, item);
+    return this.http.post<T>(`${this.apiUrl}${endpoint}`, item);
   }
 
   update(endpoint: string, id: any, item: T): Observable<T> {

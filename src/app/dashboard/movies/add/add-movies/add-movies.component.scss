@@ -14,14 +14,7 @@
     margin-right: 20px;
     margin-left: 20px;
   }
-  
-//   .container input, .container select {
-//     border: 1px solid #ccc;
-//     border-radius: 5px;
-//     padding: 10px;
-//     margin: 5px 0;
-//     width: 100%;
-//   }
+
 
 .form-group {
     margin-bottom: 15px;
@@ -57,3 +50,33 @@ input, select {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .error {
+    color: red;
+    padding: 10px;
+  }
+
+  .error-border {
+    border: 1px solid red;
+  }
+  
+  .loader {
+    border: 6px solid #6f6e6e;
+    border-top: 6px solid #000000;
+    border-radius: 60%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

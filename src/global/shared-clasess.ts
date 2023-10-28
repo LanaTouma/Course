@@ -13,7 +13,7 @@ export class Movies{
     ID:            number;
     Title:         string;
     ImagePath:     string;
-    ReleaseYear:   Date;
+    ReleaseYear:   string;
     GenreId:       number;
     DirectorId:    number;
     Genre:         string;
