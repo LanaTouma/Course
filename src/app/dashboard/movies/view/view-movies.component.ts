@@ -3,7 +3,7 @@ import { MoviesService } from '../../movies.service';
 import { Movies } from 'src/global/shared-clasess';
 import { NgOptimizedImage } from '@angular/common'
 import { Router } from '@angular/router';
-
+import { LoginService } from 'src/app/login/login.service';
 @Component({
   selector: 'app-view-movies',
   templateUrl: './view-movies.component.html',
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class MoviesComponent implements OnInit {
 
-  constructor(private moviesService: MoviesService<any>,private router: Router) { }
+  constructor(private moviesService: MoviesService<any>,private router: Router, public loginService: LoginService) { }
 
 
   items:          any[] = [];

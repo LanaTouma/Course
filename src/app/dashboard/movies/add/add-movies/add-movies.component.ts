@@ -28,15 +28,17 @@ export class AddMoviesComponent implements OnInit {
    this.getAllDirectors();
   }
 
+  
+
   onSubmit(form: NgForm) {
     
     if (form.valid) {
       const newMovie: Movies = new Movies();
-      debugger
       newMovie.Title = this.movies.Title;
       newMovie.ReleaseYear = this.movies.ReleaseYear;
-      newMovie.ImagePath = this.movies.ImagePath;
-  
+      // Create a FormData object to send the image
+      const formData = new FormData();
+
       const selectedGenre = this.genres.find(genres => genres.ID == this.selectedGenreId);
       if (selectedGenre) {
         newMovie.GenreId = selectedGenre.ID;
@@ -55,9 +57,17 @@ export class AddMoviesComponent implements OnInit {
         return;
       }
   
-      console.log('New Movie:', newMovie);
+      formData.append('image', this.movies.ImagePath);
+  
+      // Add other properties to the FormData
+      formData.append('Title', newMovie.Title);
+      formData.append('ReleaseYear', newMovie.ReleaseYear.toString());
+      formData.append('GenreId', this.selectedGenreId.toString());
+      formData.append('DirectorId', this.selectedDirectorId.toString());
 
-      this.moviesService.create('Movies', newMovie).subscribe(
+      console.log('New Movie:', formData);
+
+      this.moviesService.create('Movies', formData).subscribe(
         (response) => {
           this.loader = false;
           console.log('New movie added:', response);
