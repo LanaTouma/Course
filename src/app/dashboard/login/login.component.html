@@ -1,0 +1,71 @@
+<!-- <div class="container" (mouseover)="applyHoverEffect()" (mouseout)="removeHoverEffect()">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+      <h2>Please Sign In</h2>
+      <input type="email" placeholder="email">
+      <input type="password" placeholder="password">
+
+      <button class="button type--B" (click)="onlick()">
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">Sign In</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </button>
+
+
+      <h2>&nbsp;</h2>
+    </div>
+
+
+
+
+
+  </div>
+  
+   -->
+
+
+ 
+
+   <div class="envelope" title="">
+
+
+
+  
+    <div class="back"></div>
+    <form class="letter">
+      <p>
+        <label>Email:</label>
+        <input type="email" name="email" />
+      </p>
+      <p>
+        <label>Password:</label>
+        <input type="password" name="password" />
+      </p>
+      <button class="button type--B" (click)="onlick()">
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">Sign In</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </button>
+
+
+      <div class="center" *ngIf="loader">
+        <div class="loader loader--loading">
+         <div class="loader__top"></div>
+         <div class="loader__envelope">
+           <div class="loader__envelope__back"></div>
+           <div class="loader__progress"></div>
+           <div class="loader__envelope__front-shadow"></div>
+           <div class="loader__envelope__flaps"></div>
+           <div class="loader__envelope__front"></div>
+         </div>
+       </div>
+      </div>
+      
+    </form>
+    
+  </div>

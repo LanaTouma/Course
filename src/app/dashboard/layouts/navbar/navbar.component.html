@@ -7,21 +7,33 @@
         <li class="dropdown">
             <a href="#">Genres</a> 
             <div class="dropdown-content">
-                <a href="#">Action</a>
-                <a href="#">Comedy</a> 
-                <a href="#">Drama</a> 
-                <a href="#">Sci-Fi</a> 
-                <a href="#">Horror</a> 
+                <div *ngFor="let genre of genres">
+                    <a>{{ genre.Name }}</a>
+                </div>
             </div>
         </li>
+
+        <li class="dropdown">
+            <a href="#">Actors</a>
+            <div class="dropdown-content">
+            <div *ngFor="let actor of actors">
+                <a [routerLink]="['/actor-details', actor.ID]">{{ actor.FullName }}</a>
+            </div>
+            </div>
+        </li>
+        
     </ul>
     <div class="title">Movie Spotlight</div>
     <div class="search">
+        <button class="login-button" *ngIf="!logoutButton" routerLink="/login">Login</button>
+        <button class="login-button" *ngIf="logoutButton" routerLink="/login" (click)="logout()">Logout</button>
+        
         <input type="text" id="searchInput" placeholder="Search">
-        <button type="submit" class="search-icon">
+        <button type="submit" class="search-icon" (click)="onSearch()">
             <i class="fas fa-search"></i>
         </button>
     </div>
+
 
     
 </div>

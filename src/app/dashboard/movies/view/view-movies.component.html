@@ -1,9 +1,19 @@
+  
  <div class="page-container">
     <div></div>
+
+    <div class="loader-container" *ngIf="isLoading">
+      <div class="loader"></div>
+    </div>
+
     <div class="cards-container">
         <div class="card" *ngFor="let movie of movies">
             <div class="image-container">
-              <img class="image" [src]="'http://' + movie.ImagePath" alt="Your Image">
+              <a [routerLink]="['/movie-details', movie.ID]">
+                <div class="image-container">
+                  <img class="image" [src]="'http://' + movie.ImagePath" alt="Poster Image">
+                </div>
+              </a>
             </div>
             <div class="title">{{ movie.Title }}</div>
             <div class="genre">{{ movie.Genre }}</div>

@@ -20,7 +20,7 @@ export class MoviesComponent implements OnInit {
   updatedItem:    any;
 
   movies:         Movies[];
-  loader:         boolean = true;
+  isLoading:      boolean = true;
 
   ngOnInit() {
     this.getAllItems();
@@ -49,7 +49,7 @@ export class MoviesComponent implements OnInit {
   getAllMovies() {
     this.moviesService.getAll('Movies').subscribe((data: Movies[]) => {
       this.movies = data;
-      this.loader = false;
+      this.isLoading = false;
       console.log(this.items); // Assign the response to the movies array
     });
   }

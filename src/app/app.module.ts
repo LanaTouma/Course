@@ -15,6 +15,8 @@ import { MoviesModule } from './dashboard/movies/view/view-movies.module';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
+import { DetailsComponent } from './dashboard/movies/details/details.component';
+import { ErrorPageComponent } from './dashboard/error-page/error-page.component';
 
 
 @NgModule({
@@ -26,9 +28,8 @@ import { LoginService } from './login/login.service';
     EditMovieComponent,
     NavbarComponent,
     LoginComponent,
-
-   
- 
+    DetailsComponent,
+    ErrorPageComponent,
 
   ],
   imports: [

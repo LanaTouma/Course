@@ -1,0 +1,45 @@
+.page_404 {
+    padding: 10px 0;
+    background: #fff;
+    font-family: 'Arvo', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 500px;
+    width: 500px;
+    background-position: center;
+    background-size: contain;
+}
+
+.four_zero_four_bg h1 {
+    font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+    font-size: 80px;
+}
+
+.contant_box_404 {
+    margin-top: -50px;
+}
+
+
+.button {
+    padding: 9px 15px;
+    background-color: #3498db;
+    color: white;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }

@@ -47,7 +47,7 @@ body {
     position: absolute;
     background-color: #4f2b38;
     flex-direction: column; /* Display genres vertically */
-    min-width: 120px; /* Set a minimum width for better visibility */
+    width: max-content; /* Allow the width to adjust to the content */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
     border: 1px solid #555; /* Add a border for separation */
 }
@@ -58,14 +58,15 @@ body {
 
 /* Dropdown Links */
 .dropdown-content a {
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s; /* Add a smooth background color transition */
+    padding: 8px 12px; /* Adjust padding as needed */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove default link underline */
+    display: block;
 }
 
+/* Change color on hover if desired */
 .dropdown-content a:hover {
-    background-color: #555; /* Change background color on hover */
+    background-color: #743854; /* Change background color on hover */
 }
 
 
@@ -97,3 +98,23 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 20px;
 }
+
+
+/* Basic styles for the button */
+.login-button {
+    padding: 9px 15px;
+    background-color: #3498db;
+    color: white;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect */
+  .login-button:hover {
+    background-color: #2980b9;
+  }
+  
+  

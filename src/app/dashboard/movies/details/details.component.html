@@ -1,0 +1,18 @@
+<div class="loader-container" *ngIf="isLoading">
+  <div class="loader"></div>
+</div>
+
+
+<div class="movie-details">
+  
+    <div class="small-card">
+      <img class="image" [src]="'http://' + movie.ImagePath" alt="Movie Poster">
+    </div>
+    <div class="large-card">
+        <br><br>
+      <h2> Title:      {{ movie.Title }}        </h2>
+      <p>  Genre:      {{ movie.Genre }}        </p>
+      <p>  Released:   {{ movie.ReleaseYear }}  </p>
+      <p>  Director:   {{ movie.Director }}     </p>
+    </div>
+  </div>

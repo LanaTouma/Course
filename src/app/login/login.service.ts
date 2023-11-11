@@ -87,14 +87,12 @@ export class LoginService {
       this.loggedInUser.userName = '';
       this.loggedInUser.expires = new Date('01-01-1980');
     } else {
-      // Decrypt info if it's encrypted
       this.loggedInUser = JSON.parse(lStorageUser);
     }
     return this.loggedInUser;
   }
 
   saveUserInfo(loginUser: LoginModel) {
-    // Use encryption if possible
     localStorage.setItem('currentUser', JSON.stringify(loginUser));
   }
 }
