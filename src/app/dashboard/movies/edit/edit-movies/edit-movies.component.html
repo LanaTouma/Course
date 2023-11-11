@@ -1,22 +1,28 @@
 <div *ngIf="showSuccessMessage" class="success-message">
     Movie edited successfully!
   </div>
-<form (ngSubmit)="updateMovie()">
+  
+  <form (ngSubmit)="updateMovie()" #movieForm="ngForm">
     <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" id="title" [(ngModel)]="movie.Title" name="title" required>
+      <label for="title">Title</label>
+      <input type="text" id="title" [(ngModel)]="movie.Title" name="title" required>
     </div>
     <div class="form-group">
-        <label for="director">Director</label>
-        <input type="text" id="director" [(ngModel)]="movie.Director" name="director" required>
+      <label for="director">Director</label>
+      <input type="text" id="director" [(ngModel)]="movie.DirectorId" name="director" required>
     </div>
     <div class="form-group">
-        <label for="genre">Genre</label>
-        <input type="text" id="genre" [(ngModel)]="movie.Genre" name="genre" required>
+      <label for="genre">Genre</label>
+      <input type="text" id="genre" [(ngModel)]="movie.GenreId" name="genre" required>
     </div>
     <div class="form-group">
-        <label for="releaseYear">Release Year</label>
-        <input type="number" id="releaseYear" [(ngModel)]="movie.ReleaseYear" name="releaseYear" required>
+      <label for="releaseYear">Release Year</label>
+      <input type="number" id="releaseYear" [(ngModel)]="movie.ReleaseYear" name="releaseYear" required>
     </div>
-    <button type="submit">Update Movie</button>
-</form>
+    <div class="form-group">
+      <label for="image">Upload New Image</label>
+      <input type="file" id="image" (change)="onImageUpload($event)" accept="image/*">
+    </div>
+    <button type="submit" [disabled]="!movieForm.valid" >Update Movie</button>
+  </form>
+  

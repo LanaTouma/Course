@@ -1,0 +1,21 @@
+<div class="container" (mouseover)="applyHoverEffect()" (mouseout)="removeHoverEffect()">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+      <h2>Please Sign In</h2>
+      <form (ngSubmit)="login()">
+        <input type="email" placeholder="email" [(ngModel)]="username" name="username">
+        <input type="password" placeholder="password" [(ngModel)]="password" name="password">
+  
+        <button class="button type--B" type="submit">
+          <div class="button__line"></div>
+          <div class="button__line"></div>
+          <span class="button__text">Sign In</span>
+          <div class="button__drow1"></div>
+          <div class="button__drow2"></div>
+        </button>
+      </form>
+      <h2>&nbsp;</h2>
+    </div>
+  </div>
+  

@@ -9,10 +9,10 @@
             <div class="genre">{{ movie.Genre }}</div>
             <div>              {{ movie.ReleaseYear }}</div>
             <div class="action-buttons">
-                <button class="action-button"[routerLink]="'/edit-movie/' + movie.ID" >
-                  <i class="fa fa-pencil"></i>
+                <button class="action-button"[routerLink]="'/edit-movie/' + movie.ID" *ngIf="loginService.isLogged">
+                  <i class="fa fa-pen"></i>
                 </button>
-                <button class="action-button" style="background-color: rgb(185, 4, 4);" (click)="deleteItem(movie.ID)">
+                <button class="action-button-delete" (click)="deleteItem(movie.ID)" *ngIf="loginService.isLogged">
                   <i class="fa fa-trash"></i>
                 </button>
             </div>

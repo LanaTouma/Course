@@ -32,7 +32,8 @@ export class MoviesService<T> {
   }
 
   update(endpoint: string, id: any, item: T): Observable<T> {
-    return this.http.put<T>(`${endpoint}/${id}`, item);
+    debugger
+    return this.http.put<T>(`${this.apiUrl}${endpoint}/${id}`, item);
   }
 
 
